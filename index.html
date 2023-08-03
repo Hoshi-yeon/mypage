@@ -1,153 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>결혼 청첩장</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
-
-      * {
-        font-family: "Gowun Dodum", sans-serif;
-      }
-
-      .mytitle {
-        background-color: green;
-        color: white;
-
-        height: 250px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
-        background-position: center;
-        background-size: cover;
-      }
-
-      .mytitle > button {
-        width: 250px;
-        height: 50px;
-
-        background-color: transparent;
-
-        border: 1px solid white;
-        color: white;
-
-        border-radius: 50px;
-
-        margin-top: 20px;
-      }
-
-      .mytitle > button:hover {
-        border: 2px solid white;
-      }
-
-      .mycomment {
-        color: gray;
-      }
-
-      .mycards {
-        width: 1200px;
-        margin: 20px auto 20px auto;
-      }
-
-      .mypost {
-        width: 500px;
-        margin: 20px auto 20px auto;
-        padding: 20px 20px 20px 20px;
-
-        box-shadow: 0px 0px 3px 0px gray;
-      }
-
-      .mybtn {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        margin-top: 20px;
-      }
-
-      .mybtn > button {
-        margin-right: 10px;
-      }
+        * {
+            font-family: 'IBM Plex Sans KR', sans-serif;
+        }
+        body, h1, h2, h3, p, a {
+            font-size: 16px;
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        .wrap {
+            width: 350px;
+            margin: auto;
+        }
+        h1{
+            width: 100%;
+            height: 55px;
+            text-indent: 15px;
+            /* text-align: center; */
+            line-height: 55px;
+            color: #fff;
+            background-color: pink;
+        }
+        .pic{
+            width: 100%;
+            margin-top:40px;
+        }
+        .pic p:nth-child(1){
+            text-align: center;
+            letter-spacing: 4px;
+            color: pink;
+        }
+        .pic p:nth-child(2){
+            width: 260px;
+            height: 173px;
+            margin: 10px auto;
+            border: 3px solid pink;
+        }
+        .pic p:nth-child(2) > img {
+            width: 100%;
+        }
+        .pic p:nth-child(3){
+            width: 100%;
+            text-align: center;
+            color: pink;
+            letter-spacing: 4px;
+        }
+        .name{
+            width: 200px;
+            height: 40px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 40px;
+            font-size: 22px;
+            font-weight: 600;
+            color: pink;
+            border-top: 1px solid pink;
+            border-bottom: 1px solid pink;
+        }
+        .main{
+            width: 80%;
+            padding: 30px 40px 10px 20px;
+            color: #fff;
+            background-color: pink;
+        }
+        .main > p{
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .main > p:last-child{
+            text-align: center;
+            font-size: 15px;
+        }
+        .bottom{
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .bottom > p:first-child{
+            margin-bottom: 20px;
+            color: pink;
+        }
+        .bottom > p > input{
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        .bottom > textarea {
+            width: 250px;
+            height: 100px;
+        }
+        .bottom > button{
+            width: 150px;
+            height: 40px;
+            margin: 20px 0px;
+            background-color: pink;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
-  </head>
+</head>
+<body>
+    <div class="wrap">
+        <h1>영희와 철수의 첫 시작을 축하해주세요</h1>
+        <div class="pic">
+            <p>Save The Date</p>
+            <p><img src="/청첩장/image.png" alt="wedding"/></p>
+            <p>12.31.SUNDAY.PM.12:30</p>
+        </div>
+        <div class="name">
+            김영희 & 이철수
+        </div>
+        <div class="main">
+            <p>INVITATION</p>
+            서로 다른 두 사람이 만나<br/>
+            사랑으로 하나 되는 자리에<br/>
+            소중한 여러분들을 초대합니다.<br/>
+            기쁠 때나, 슬플 때나<br/>
+            서로를 사랑으로 품으며<br/>
+            행복의 계단을 쌓아가겠습니다.<br/>
+            저희의 첫 시작을 함께 해주신다면<br/>
+            감사한 마음 깊이 간직하며 잘 살겠습니다.<br/><br/>
 
-  <body>
-    <div class="mytitle">
-      <h1>내 생애 최고의 영화들</h1>
-      <button>영화 기록하기</button>
+            <p>2023. 12. 31. SUN. PM 12:30<br/>
+            스파르타웨딩 르탄홀</p>
+        </div>
+        <div class="bottom">
+           <p>축하메시지를 남겨주세요</p>
+           <p><input type="text" placeholder="이름"/></p>
+           <textarea type="text" placeholder="메시지를 남겨주세요"></textarea>
+           <button>메시지 남기기</button>
+        </div>
     </div>
-    <div class="mypost">
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-        <label for="floatingInput">영화URL</label>
-      </div>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">코멘트</label>
-      </div>
-      <div class="mybtn">
-        <button type="button" class="btn btn-dark">기록하기</button>
-        <button type="button" class="btn btn-outline-dark">닫기</button>
-      </div>
-    </div>
-    <div class="mycards">
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-              <p class="card-text">여기에 코멘트가 들어갑니다.</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-              <p class="card-text">여기에 코멘트가 들어갑니다.</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-              <p class="card-text">여기에 코멘트가 들어갑니다.</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-              <p class="card-text">여기에 코멘트가 들어갑니다.</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
 </html>
